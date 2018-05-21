@@ -4,6 +4,10 @@ version := "1.0"
 
 scalaVersion := "2.11.12"
 
+scalacOptions += "-Ypartial-unification"
+
+scalafmtOnCompile in ThisBuild := true
+
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .settings(
@@ -13,4 +17,3 @@ lazy val root = (project in file("."))
       "org.pac4j" % "pac4j-saml" % "1.7.0"
     )
   )
-
